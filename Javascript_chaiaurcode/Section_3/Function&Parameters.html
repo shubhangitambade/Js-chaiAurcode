@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Function and Parameter</title>
+    
+</head>
+<body>
+    
+
+    <script>
+        function sayMyName(){
+            console.log("S");
+            console.log("H");
+            console.log("U");
+            console.log("B");
+            console.log("H");
+
+        }
+
+        //sayMyName is reference of function
+        sayMyName(); //calling the function or exicuting the function
+        
+
+        function addTwoNumbers(num1,num2){
+
+            console.log(num1 + num2);
+        }
+
+        //addTwoNumbers() will give error
+        addTwoNumbers(3,4); //Passing arguments to parameters num1 and num2
+
+        var result = addTwoNumbers(20,30); 
+        //Ans will be undefined because you are not returining the addition from function only printing the addition of two numbers inside function.
+        console.log(result);
+
+        function addTwoNums(num1,num2){
+
+            console.log("Hitesh"); //will exicute
+
+            return num1 + num2;
+
+            console.log("Hitesh"); //will never exicute as after return statement control goes out of the function.
+        }
+        var result = addTwoNums(20,30); 
+        console.log("Result :: ",result);
+
+        function loginUserMessage(username){
+
+            return `${username} just logged in`;
+
+        }
+
+        console.log(loginUserMessage("Hita"));
+        console.log(loginUserMessage());
+
+        function loginUserMessage1(username){
+
+            if(username === undefined) //or !(username)
+            {
+                console.log("Please enter the username...");
+                return;
+            }
+            return `${username} just logged in`;
+
+        }
+        console.log(loginUserMessage1());
+
+    </script>
+</body>
+</html>

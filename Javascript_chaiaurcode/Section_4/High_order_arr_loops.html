@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>High Order Array Loops</title>
+</head>
+<body>
+    
+
+    <script>
+        const arr = [1,2,3,4,5,6];
+
+        for(const val of arr){
+
+            console.log(val);
+        }
+
+        const greetings = "Hello world!";
+        for(const greet of greetings)
+        {
+            console.log(` Each char is ${greet}`);
+        }
+
+
+        //Maps :concept is close to array but some things are differnt.Map itself is object.Actually javascript everything is object
+        //Map is bect in key:value pair
+      /*  const map1 = new Map();
+        map1.set('IN',"India");
+        map1.set('USA',"United states of America");
+        map1.set('Fr',"France");
+        map1.set('IN',"India");
+
+        console.log(map1); //map stores unique values and print the output in the given order.
+
+        //for of loop
+        for(const key of map1)
+        {
+            console.log(key);
+        }
+
+        //array destructor
+        for(const [key , value] of map1)
+        {
+            console.log(key , '=' , value);
+        }
+
+
+        const myObject = {
+            'game1':'NFS',
+            'game2':'SpiderMan'
+        }
+
+        //It gives error to print object members.
+        for(const [key,value] of myObject)
+        {
+            console.log(key , ' :' ,value);
+        }*/
+
+
+        const myObject = {
+
+            js:'javascript',
+            cpp:'C++',
+            rb:"ruby",
+            swift:"swift by apple"
+        }
+
+        //forin loop
+
+        for(const key in myObject)
+        {
+            //console.log(myObject[key]);
+
+           // console.log(`${key }  shortcut is for ${myObject[key]}`);
+
+        }
+
+        const programming =["js","rb","py","java","cpp"]
+
+        for(const key in programming)
+        {
+           // console.log(key);
+
+           //console.log(programming[key]);
+        }
+
+        const map1 = new Map();
+        map1.set('IN',"India");
+        map1.set('USA',"United states of America");
+        map1.set('Fr',"France");
+        map1.set('IN',"India");
+
+        //Map is not iterable so on Map we can't use loop
+        for(const key in map1)
+        {
+            console.log(key);
+        }
+    </script>
+</body>
+</html>

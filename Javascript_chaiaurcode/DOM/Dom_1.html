@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM Learning</title>
+    <style>
+        .bg-black{
+            background-color:rgb(238, 150, 36);
+            color: #fff;
+
+        }
+    </style>
+</head>
+<body>
+    <div class = "bg-black">
+        <h1  id="title" class="heading">
+            DOM learning on chai aur code
+        </h1>
+
+        <h2> Heading 2</h2>
+        <h3> Heading 3</h3>
+        <p>Lorem ipsum dolor sit amet</p>
+    
+        <ul>
+            <li>One</li>
+            <li>Two</li>
+            <li>Three</li>
+        </ul>
+
+        <!--
+            list are not array ,they are nodelist so u can't use map on that but u can use forEach for Nodelist.
+
+            If you want to convert Nodelist into array then use:Array.from(nodelistName);//So you will get 'map' functionality also.
+        -->
+
+        <!--
+            const allH2 = document.querySelectorAll('h2')
+            undefined
+            allH2[0].innerText
+            'Contents'
+            allH2[1].innerText
+            'Early life and education'
+        -->
+
+        <!--
+
+            allH2.forEach(function(h)
+            { 
+                h.style.color = 'blue';
+                h.style.backgroundColor = 'greay';
+                h.style.padding = '20px';
+
+            })
+        -->
+    </div>
+</body>
+</html>

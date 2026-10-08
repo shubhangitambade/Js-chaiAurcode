@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array Part 1</title>
+</head>
+<body>
+    <script>
+        const myArray = [0,1,2,3,4];
+        //Array size is resizable in javascript ,can add more elements.Also you can create mixed data type array in javascript.
+
+        //Array inside array can be possible.
+        console.log(myArray[0]);
+        //javascript array's in case of copy operation create shallow copy.
+        
+
+        const myHeroes = ["VikasBhau","Baba Amte"];
+        console.log(myHeroes);
+
+        //Array methods
+        myArray.push(5);
+        console.log(myArray);
+        myArray.pop();
+        console.log(myArray);
+
+        myArray.unshift(9);
+        console.log(myArray);
+        myArray.shift();
+       console.log(myArray);
+
+        console.log(myArray.includes(9));
+
+        console.log(myArray.indexOf(3));
+
+        console.log(myArray.indexOf(9));
+
+        console.log("myArray.join() :: ")
+        console.log(myArray.join()); //Convert array to string
+      
+        console.log(typeof myArray);
+        
+        //slice
+        mysliceArr = myArray.slice(1,3);
+        console.log("Result After slice :",mysliceArr);
+        console.log(" After slice the original array is ",myArray);
+
+        myspliceArr = myArray.splice(1,3);
+        console.log("Result After splice :",myspliceArr);
+        console.log(" After splice original array :",myArray);
+
+
+        //splice
+    </script>
+</body>
+</html>

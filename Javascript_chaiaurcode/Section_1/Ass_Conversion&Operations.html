@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Javascript Basics 03</title>
+</head>
+<body>
+    
+    <script>
+        let score = "33";
+
+        console.log("score : ", score);
+        console.log("typeof score :",typeof(score));
+        console.log("After converting it to number score is : ",Number(score));
+        console.log("typeof score :",typeof(Number(score)));
+        console.log("--------------------------------------------------------");
+        
+        score = "33abc";
+        
+        console.log("typeof score :",typeof(score));
+        console.log("After converting it to number score is : ",Number(score));//NAN: Not A Number.It is special type.
+        console.log("typeof score :",typeof(Number(score)));
+        
+        console.log("-------------------------------------------------------");
+        score = null;
+        console.log("score : ", score);
+        console.log("typeof score :",typeof(score));
+        console.log("After converting it to number score is : ",Number(score));
+        console.log("typeof score :",typeof(Number(score)));
+        console.log("--------------------------------------------------------");
+
+        score = undefined;
+        console.log("score : ", score);
+        console.log("typeof score :",typeof(score));
+        console.log("After converting it to number score is : ",Number(score));
+        console.log("typeof score :",typeof(Number(score)));
+        console.log("--------------------------------------------------------");
+
+        score = true;
+        console.log("score : ", score);
+        console.log("typeof score :",typeof(score));
+        console.log("After converting it to number score is : ",Number(score));
+        console.log("typeof score :",typeof(Number(score)));
+        console.log("--------------------------------------------------------");
+
+        score = "Shubhangi";
+        console.log("score : ", score);
+        console.log("typeof score :",typeof(score));
+        console.log("After converting it to number score is : ",Number(score));
+        console.log("typeof score :",typeof(Number(score)));
+        console.log("--------------------------------------------------------");
+
+        let loggedIn = 1;
+        let booleanLoggedIn = Boolean(loggedIn);
+        console.log(booleanLoggedIn); //1 converted into true
+        console.log("------------------------------------------------------");
+
+        let someNumber = 33;
+        let stringNumber = String(someNumber);
+        console.log(stringNumber);//visually number but actually type is string here.
+        console.log(typeof stringNumber);
+        //"33" => converted into number gives = 33
+        //"33123" => converted into number gives = NAN(but type is number)
+        //true => converted into number gives =1(and false into 0)
+        //
+
+    </script>
+</body>
+</html>

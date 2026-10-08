@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>For each loop</title>
+</head>
+<body>
+    
+    <script>
+        const coding = ["js","ruby","c++","java","python"];
+
+        coding.forEach(function (item){
+
+            console.log(item);
+        });
+
+        coding.forEach( (val) => {
+
+            console.log(val);
+        });
+
+
+        function printMe(item){
+
+            console.log(item);
+        }
+
+        coding.forEach(printMe);//Here function's reference is given.It is not called.
+   
+        const myCoding = [
+
+            {
+                languagName:"javascript",
+                lalanguageFileName:"js"
+            },
+            {
+                languagName:"java",
+                lalanguageFileName:"java"
+            },
+            {
+                languagName:"cpp",
+                lalanguageFileName:"cpp"
+            }
+        ]
+   
+        myCoding.forEach((item) => {
+
+            console.log(item.languagName);
+        })
+   </script>
+</body>
+</html>

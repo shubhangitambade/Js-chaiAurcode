@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Object Destructor Json Type</title>
+</head>
+<body>
+    
+
+    <script>
+        const course = {
+
+            coursename: "js in hindi",
+            price:"999",
+            courseInstructor:"Hitesh"
+        }
+
+        //course.courseInstructor Many times using such a sytax is not sutable
+        //so use de-structureing showing below
+        const{courseInstructor:instructor} = course; //Hrer instructor is alies for courseInstructor as it is very long name.
+        console.log(instructor);
+
+        //JSON is javascript Object notation
+    </script>
+</body>
+</html>

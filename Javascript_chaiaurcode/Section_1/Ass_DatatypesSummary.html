@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Javascript Basic 06</title>
+</head>
+<body>
+    
+    <script>
+        //Primitive
+        //7 types :String,Number,Boolean,null,undefined,symbol,BigInt
+
+        //Reference (Non - Primitive)
+        //Array,Objects,Functions
+
+        //Javascript is staically or dynamically type language?
+
+        //Symbol :
+         const id=Symbol('123');
+        const anotherId = Symbol('123');
+        console.log(id == anotherId);
+
+        const bigNumber = 345678912398979n;//represent n in the last in case og bigNUmber data type
+
+        //Array
+        const heros = ["ABC","CDE","EFG"];
+
+        //Object
+        let myObj = {
+
+            name:"Hitesh",
+            age:22
+        }
+
+        //Function
+     /*   const myFunction = function(){
+
+            console.log("Hello Word");
+        }
+
+        console.log(typeof bigNumber);
+
+        console.log(typeof myFunction);*/
+
+        console.log("--------------------- About Memory ---------------------");
+       // Stack(Primitive type) And Heap(Non-primitive type)
+
+       //In case "stack memeory" you will get copy of that variable (which you declared)
+       //In case of "heap memery"  you will get reference of original values so any change in value of variable will 
+       //reflect to the original location.
+
+
+       let myYoutubename = "shubhatdotcom";
+       console.log("myYoutubename :",myYoutubename);
+
+       let anothername = myYoutubename;
+       console.log("anothername : ",anothername);
+
+       anothername = "chaiaurcode";
+       console.log("After changing value of anothername : ",anothername);
+
+        let userOne = {
+
+            email:"user@google.com",
+            upi:"user@ybl"
+        }
+
+        let userTwo = userOne;
+        console.log("userTwo :: ",userTwo);
+
+        userTwo.email = "hitesh@google.com";
+        console.log("After changing the email of userTwo : ");
+        console.log("userOne email :: ",userOne.email);//output : hitesh@google.com
+        console.log("userTwo email :: ",userTwo.email); //output : hitesh@google. As both object pointing to same reference changes made by any object will reflect in both objects.
+        //Here userOne is on stack and it's reference is on heap
+        //means {email:"user@google.com",upi:"user@ybl"} and userTwo(which is on stack) pointing to the same reference
+
+
+    </script>
+</body>
+</html>

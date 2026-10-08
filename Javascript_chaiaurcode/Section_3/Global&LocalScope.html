@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Global Scope & Local Scope</title>
+</head>
+<body>
+    
+    <script>
+        //{} defines the scope with any function or if-else etc
+
+        // let a = 10;
+        // const b = 20;
+        // var c = 30;
+
+        // console.log(a);
+        // console.log(b);
+        // console.log(c);
+
+
+
+       /* if(true){
+
+            let a = 10;
+            const b = 20;
+           // var c = 30;
+        }
+
+        //console.log(a);//Uncaught ReferenceError: a is not defined(defined as let)
+        // console.log(b); //Uncaught ReferenceError: b is not defined(definded as a const)
+         console.log(c); //Output is 30 (defined as a var)
+   
+        */
+
+        var c = 500; //Globally declared
+        let a = 500;//Globally declared
+        if(true){
+
+            let a = 10;
+            const b = 20;
+            var c = 30;
+
+            console.log("Inner value of a : " + a); //Locally declared
+        }
+
+        console.log(c);
+        console.log(a);
+
+
+   
+   </script>
+</body>
+</html>

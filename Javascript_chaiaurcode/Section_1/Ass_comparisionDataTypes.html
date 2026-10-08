@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Javascript Basics 05</title>
+</head>
+<body>
+
+    <script>
+            console.log("2" > 1);
+            console.log("02" > 1);
+
+            console.log("----------------------------------------");
+            console.log(null > 0); //Ans: false
+            console.log(null == 0); //Ans: false
+            console.log(null >= 0); //Ans: true
+            //The reason 3rd is true Why?
+            //The reason is that an equality check ==  and comparision > < >= <= work differently
+            //Comparison convert null to a number ,treation it as 0
+            //That's why (3) null>=0 is true and (1) null > 0  is false.
+
+            console.log("--------------------------------------");
+            console.log(undefined == 0);
+            console.log(undefined > 0);
+            console.log(undefined < 0);
+
+            //strct check === (check value as well as data types)
+
+            //VIP :: Don't compare like this.Follow with clean code.
+
+    </script>
+    
+</body>
+</html>

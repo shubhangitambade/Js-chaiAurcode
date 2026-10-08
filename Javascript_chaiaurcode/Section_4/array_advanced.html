@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Advanced Array</title>
+</head>
+<body>
+    
+    <script>
+
+       /* const coding = ["Js","ruby","java","python"];
+
+        const values = coding.forEach( (item) =>{
+            console.log(item);
+
+            return item;
+        })
+
+        console.log(values);//output is : undefined (because forEach is not returning the retult,But in some cases you want collect the return values)
+    
+        */
+        const myNums = [1,2,3,4,5,6,7,8,9];
+
+        //filter also expect callback fn
+        
+        //filter will return the values.
+
+     //   const newNums = myNums.filter( (num) => num > 5) //In arrow operator round braket automatically return the values
+        
+      //  console.log(newNums);
+        //But In case of arrow operator if  curly braces are used you should return the values using 'return' keyword.
+        //if inside curly braces 'return' keyword is not used then output will be blank array. 
+
+        /*const newNums1 = myNums.filter( (num) => {
+
+            return num > 5;
+        })
+
+        console.log(newNums1);*/
+
+
+        //To overcome forEach limitation follw the follwing method to collect the newArray according to condition.
+
+
+        const newNums2 = [];
+
+        myNums.forEach( (num) => {
+
+            if(num > 5)
+            {
+                newNums2.push(num);
+            }
+        })
+
+        console.log(newNums2);
+
+
+        const books = [
+        {
+            "title": "The Great Gatsby",
+            "genre": "Classic Literature",
+            "publish": 1925,
+            "edition": 1990
+        },
+        {
+            "title": "To Kill a Mockingbird",
+            "genre": "Fiction",
+            "publish": 1960,
+            "edition":  1985                     //"50th Anniversary Edition"
+        },
+        {
+            "title": "Dune",
+            "genre": "Science Fiction",
+            "publish": 1965,
+            "edition":  2000                           //"Deluxe Edition"
+        },
+        {
+            "title": "The Hobbit",
+            "genre": "Fantasy",
+            "publish": 1937,
+            "edition":  1950                        //"75th Anniversary Edition"
+        },
+        {
+            "title": "Educated",
+            "genre": "Biography / Memoir",
+            "publish": 2018,
+            "edition": 2025                           //"International Edition"
+        }
+]
+
+
+        let userBooks = books.filter( (bk) => bk.genre === "Fiction")
+       // console.log(userBooks);
+
+        userBooks = books.filter ( (bk) => { return bk.publish >= 1965} );
+       // console.log(userBooks);
+
+
+        userBooks = books.filter ( (bk) =>  bk.publish >= 1965 && bk.genre === "Science Fiction" );
+        console.log(userBooks);
+
+
+        
+    </script>
+</body>
+</html>

@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Control Flow</title>
+</head>
+<body>
+    <script>
+        //if statement
+
+        //if(condition){
+
+            //Inside curly braces scope is there
+       // }
+
+        if(2 == "2")
+        {
+            console.log("Equal...")
+        }
+        else{
+            console.log("Not equal...");
+        }
+
+
+        if(2 === "2")
+        {
+            console.log("Equal...")
+        }
+        else{
+            console.log("Not equal...");
+        }
+
+
+        const temp = 41;
+        if(temp == 41)
+        {
+            console.log("temp is less than 50...");
+        }
+        else
+        {
+            console.log("temp is greater than 50...");
+        }
+
+
+        const score = 200;
+
+        if(score > 100)
+        {
+            const power = "fly";
+            console.log(`User Power ${power}`);
+        }
+
+       // console.log(`User Power ${power}`);//When power declared using let or const for this statement there will be error
+        //But if power is declared as var ,power will be displayed.
+
+
+
+        const balance = 1000;
+        //implicit scope .In one line if statement is written.But don't follow it.
+        if(balance > 5000 )  console.log("test");
+
+        if(balance > 2000) console.og("test"),console.log("wrong");
+        
+        if(balance < 500){
+
+            console.log("less than 500...");
+        }else if(balance < 750){
+            console.log("less than 750...");
+        }else if(balance < 900)
+        {
+            console.log("less than 900...");
+        }
+        else
+        {
+            console.log("less than 1200...");
+        }
+
+
+        const userLoggedIn = true;
+        const debitCard = true;
+        const loggedInFromGoogle = flase;
+        const loggedInFromEmail = true;
+       
+        if(userLoggedIn && debitCard & 2==2){
+
+            console.log("Allowed to buy courses....");
+        }
+
+        //To test multiple test
+        if(loggedinFromGoogle || loggedInFromEmail)
+        {
+            console.log("User Logged In...");
+        }
+
+        
+
+    </script>
+</body>
+</html>

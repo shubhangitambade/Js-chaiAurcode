@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Object</title>
+</head>
+<body>
+    
+    <script>
+        //literals and constructor two types to create objects
+
+        //singleton
+        //Object.create is created through constructor method and it is called singleton
+        
+        
+        //Object literals
+        const Juser = {
+            name:"Hitesh",
+            "full name":"Hitesh choudhary", 
+            age:18,
+            location:"Jaipur",
+            email:"hitesh@google.com",
+            isLoggedIn:false,
+            lastLoginDays:["Monday","Saturday"]
+        }
+
+        console.log(Juser.email);
+        console.log(Juser["full name"]);
+
+        //Object.freeze(Juser);//can't change the object values
+   
+        Juser.greeting = function(){
+            console.log("Hello Js user....");
+        }
+
+        Juser.greetingTwo = function(){
+            console.log(`Hello Js user.... ${this.name}`);
+        }
+   
+       // console.log(Juser.greeting());
+       // console.log(Juser.greetingTwo());
+        
+      
+  
+  </script>
+</body>
+</html>

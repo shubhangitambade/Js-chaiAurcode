@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Async Project 1</title>
+</head>
+<body>
+    <h1>Chai Aur Code</h1>
+
+    <button id="stop">Stop</button>
+
+    <script>
+
+
+        //setTimeout take 2 second time and then display the name "Hitesh" only once.
+        setTimeout(function(){
+
+            console.log("Hitesh..");
+        },2000)
+
+        const sayHitesh = function(){
+            console.log("Hitesh choudhari...");
+        }
+
+        //Here first parameter is the reference of function not the calling of function.
+        setTimeout(sayHitesh,4000);
+
+        const changeText = function(){
+            document.querySelector('h1').innerHTML = "Best js series";
+        }
+
+       // setTimeout(changeText,5000);
+
+        //cleatTimeout
+        //To clear the setTimeOut keep the handler in ant variable
+        //e.g:: 
+
+        const changeMe = setTimeout(changeText,2000);
+        //clearTimeout(changeMe);
+
+        //On event write clearTimeout
+
+
+        //If clicked on stop button then changeMe will not exicute and that fn is stopped for exicution using following code.
+        document.querySelector('#stop')
+            .addEventListener('click',function(){
+                clearTimeout(changeMe,3000);
+                console.log("Stopped...");
+            })
+
+
+        
+    </script>
+</body>
+</html>

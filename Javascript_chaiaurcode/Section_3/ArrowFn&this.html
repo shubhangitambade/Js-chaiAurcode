@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arrow Function this keyword</title>
+</head>
+<body>
+    
+    <script>
+
+        //this refers to context 
+        const user = {
+
+            username:"hitesh",
+            price:999,
+
+            welcomeMessage : function(){
+
+                console.log(` ${this.username} , welcome to website`);
+                console.log(this);
+            }
+
+            
+        }
+
+        //user.welcomeMessage();
+
+       // user.username = "Sam";
+
+       // user.welcomeMessage();//Now changed username displayed because we are not using hardcode value but using current context.
+    
+        console.log(this);//Here output is window which is browser's global object.As javascript engine is inside browser.So we get click,submit etc events.
+
+        console.log("----------------- Arrow Function ---------------------");
+
+       /* function chai(){
+
+            let username = "hitesh";
+            console.log(this.username); 
+        }
+        chai();   //output:undefined                  */
+
+        /*const chai = function(){
+
+            let username = "hitesh";
+
+            console.log(this.username);
+        }
+
+        chai();  //output:undefined  */
+
+        const chai = () =>{
+
+            let username = "hitesh";
+
+           // console.log(this.username);
+
+           console.log(this);
+        }
+
+        chai(); //Here also output is undefined.
+    
+        
+        const addTwo = (num1,num2) => {
+
+            return num1 + num2; //inside culy braces return keyword is compulsory
+        }
+
+        console.log(addTwo(30,20));
+
+        //Same addTwo fn you can write following way
+        const addTwo2 = (num1,num2)=> num1 + num2;
+        console.log("Calling addTwo2 :: ");
+        console.log(addTwo2(20,30));
+
+
+         const addTwo3 = (num1,num2)=> (num1 + num2);
+         console.log("Calling addTwo3 :: ");
+        console.log(addTwo3(20,30));
+
+        const display = () => ({usename : "Hitesh"})
+        console.log(display());
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array Part 2</title>
+</head>
+<body>
+    <script>
+        const marval_Heros=["thor","IronMan","SpiderMan"]
+    
+        const dc_Heroes = ["Superman","Batman","flash"]
+        
+        marval_Heros.push(dc_Heroes);
+        console.log(marval_Heros);
+
+       const all_Heroes= marval_Heros.concat(dc_Heroes);
+        console.log(all_Heroes); //concat both array and return new array here.
+
+        const another_array = [1,2,3,[4,5,6],7,[10,11,[4,50]]];
+        const new_another_array = another_array.flat(Infinity); //depth mensioned by 1, 2 ,3,....infinity.
+
+        console.log(new_another_array);
+
+        console.log(Array.isArray("Hitesh"));
+        console.log(Array.from("Hitesh"));
+
+        //IMP
+        console.log(Array.from({name:"Hitesh"}));//Reault is empty array as confusion in conversion [name(key) or Hitesh(value) kis ko convert karana hai]
+
+        let score1 = 100;
+        let score2 = 200;
+        let score3 = 300;
+
+        console.log(Array.of(score1,score2,score3));
+    </script>
+</body>
+</html>

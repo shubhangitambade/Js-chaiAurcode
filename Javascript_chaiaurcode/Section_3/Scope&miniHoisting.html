@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scope level and Mini hoisting</title>
+</head>
+<body>
+    <script>
+        function one(){
+
+            const username = "hitesh";
+
+            function two()
+            {
+                const website = "youtube";
+                console.log(username);
+            }
+
+            //console.log(website);//Error: scope of website is finished after two().So two() will not called.
+            //console.log("Inside function one()....")
+            two();
+        }
+
+        //console.log("outside  fn one()..... 1");
+     //   one();
+
+       // console.log("outside  fn one()..... 2");
+    
+        
+        if(true)
+        {
+            const username = "hitesh";
+
+            if(username === "hitesh")
+            {
+                const website = "youtube";
+
+                console.log("Inside 2nd if statement....");
+                console.log(username + website);
+            }
+            console.log("Inside 1st if statement....");
+            //console.log(website); Error
+        }
+
+        console.log("Outside both if statements....");
+        //console.log(username);//Error
+
+        //----------------- Interesting ------------------------
+
+        
+    
+    
+    </script>
+</body>
+</html>

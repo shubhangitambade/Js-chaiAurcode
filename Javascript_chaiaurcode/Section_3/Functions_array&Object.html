@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Function with Objects and array</title>
+</head>
+<body>
+    
+    <script>
+            function calculateCartPrice(...num1) //Here ... refers to rest operator,multiple values passed as argument but paarmeter is only one in this case ... will combine 3 values.
+            {
+                return num1;
+            }
+
+            console.log(calculateCartPrice(200,400,500));
+
+            function calculateCartPrice2(val1,val2,...num1) 
+            {
+                return num1;
+            }
+
+            console.log(calculateCartPrice2(200,400,500,2000));//[output is : [500,2000] here 200 goes to val1 ,400 goes to val2 and rest values goes to ...num1 ]
+    
+    
+            const user ={
+                username : "hitesh",
+                prices:199
+            }
+
+            function handleObject(anyObject){
+                console.log(`usename is ${anyObject.username} and price is ${anyObject.prices}`);
+            }
+
+           // handleObject(user);
+
+            //Or directly passed the object
+            handleObject({
+                username : "Sam",
+                prices:199
+            })
+            
+            const myNewArray = [200,400,100,500];
+
+            function returnSecondaryValue(getArray){
+
+                return getArray[1];
+            }
+
+            console.log(returnSecondaryValue(myNewArray));
+
+            console.log(returnSecondaryValue([200,900,300,100]))
+    </script>
+</body>
+</html>

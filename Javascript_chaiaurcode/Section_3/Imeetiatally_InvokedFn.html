@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Immediatly Invoked Function Expression [IIFE] </title>
+</head>
+<body>
+    
+    <script>
+        (function chai(){ //Named IIFE
+
+            console.log(`DB Connected....`);
+        })();
+
+        //Here first parenthesis is fn defination and second parenthesisi is excuting the function
+        //To skip global scope (global variable etc..) pollution IIFE is used in the code.
+
+
+        (() => {  //Unnamed IIFE
+
+            console.log("Hello...")
+        })();
+
+
+        ( (name) => {
+
+            console.log(name);
+         }
+        
+        )("Hitesh");
+    </script>
+</body>
+</html>

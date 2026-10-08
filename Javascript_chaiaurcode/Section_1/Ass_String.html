@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Javascript Basics 07</title>
+</head>
+<body>
+    <script>
+        const name = "hitesh"; //string can declare in this way
+        const repoCount = 50;
+
+        //console.log(name + repoCount + "Value"); old way 
+
+        //Modern way : Use bactic sign called String Interpolation
+
+        console.log(` Hello my name id ${name} and myRepo count is ${repoCount}`);
+
+        //You can declare the string another way also
+        const gameName = new String('hitesh-hC');
+
+        console.log("gameName is : ",gameName);
+
+        /*
+            String {'hiteshC'}
+0
+: 
+"h"
+1
+: 
+"i"
+2
+: 
+"t"
+3
+: 
+"e"
+4
+: 
+"s"
+5
+: 
+"h"
+6
+: 
+"C"
+length
+: 
+7
+
+Here out put is same but it is a string object so output is in key and value pair.
+Also length property get.
+And Prototypes are  avialable
+        
+        */
+
+        console.log("0th position character in gameName is  : ",gameName[0]);
+        console.log("ProtoType of gameName : ",gameName.__proto__);
+        console.log("Length : ",gameName.length);
+        console.log("Uppercase : ",gameName.toUpperCase);
+        console.log(gameName.charAt(2));
+        console.log(gameName.indexOf('t'));
+
+        const newString = gameName.substring(0,4);
+        console.log(newString);
+
+        const anotherString = gameName.slice(-8,4);
+        console.log(anotherString);
+
+        const url = "https://hitesh.com/hitesh%20choudhary";
+        console.log(url.replace('%20','-'));
+
+        console.log(url.includes('sundar'));
+
+        console.log(gameName.split('-')); //Needs sepeartor and limit.can only use seperator
+
+
+        //small,blink,bold,constructor,fix,etc find the String object methods.
+        
+
+    </script>
+</body>
+</html>

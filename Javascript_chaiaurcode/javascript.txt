@@ -1,0 +1,28 @@
+It was created in May 1995 by Brendan Eich while he was working at Netscape Communications. Remarkably, he developed the initial prototype of the language in just 10 days.
+
+
+Key Facts About Its *CreationOriginal Names: The language was initially called Mocha, then briefly renamed to LiveScript, before finally settling on JavaScript in December 1995.
+*The "Java" Name: The name was changed to JavaScript as part of a marketing alliance with Sun Microsystems (the creators of Java). Despite the name, JavaScript is entirely different from the Java programming language.
+
+*First Release: It was first shipped to the public in September 1995 as part of the Netscape Navigator 2.0 beta browser.
+-------------------------------
+
+Node js and deno js who is lead of these software?
+------------------------------
+At the core of this runtime environment is a JavaScript engine, which parses, compiles, and executes the code. Different browsers use different internal engines to power this environment:
+V8 Engine: Used by Google Chrome, Microsoft Edge, and Opera.
+
+SpiderMonkey: Used by Mozilla Firefox.
+
+JavaScriptCore (Nitro): Used by Apple Safari.
+How it Works in the BrowserUnlike server-side runtimes (like Node.js), the browser runtime provides the code with access to Web APIs—such as the Document Object Model (DOM) for manipulating web pages, the window object, and the fetch() API for network requests.
+ To trigger this environment, the browser reads an HTML file that links to the .js file via a <script> tag.
+ -------------------------------------------------------------------------
+ Writing code in javascript code readiability should high.Good practices should follow white writing the code.
+ It should be future proof code.
+--------------------------------
+String(Object) Methods
+
+
+
+ 

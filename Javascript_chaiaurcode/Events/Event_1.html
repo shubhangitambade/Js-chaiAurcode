@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML Events</title>
+</head>
+<body style="background-color: #dad0d0; color: aliceblue;">
+    <h2 style="color: blueviolet;">Amezing Images</h2>
+
+    <div>
+        <ul id="images">
+
+        <li> <img width="200px" id="img1" src="./lotus-flower.jpg" alt="lotus"></li>
+        <li><img width="200px" id="img2" src="./marigold.jpg" alt="lotus" onclick="alert('marigold')"></li>
+        <li><img width="200px" id="img3" src="./lotus-flower.jpg" alt="lotus"></li>
+        <li><img width="200px" id="img4" src="./marigold.jpg" alt="lotus"></li>
+        <li><a style="color:blueviolet" href="https://google.com" id="google"> Google </a></li>
+        </ul>
+    </div>
+    <script>
+        //Instead of this approach use EventLister because it will give you Propegation facility.It gives less features
+      /*  document.getElementById("img3").onclick = function(){
+            alert('img3 is clicked....');
+        }*/
+
+        //EventLister Approach
+       /* document.getElementById("img3").addEventListener('click',function(e){
+            console.log("img3 is clicked....");
+            e.stopPropagation();
+            //console.log(e);
+        },false); //output : img3 is clicked , clicked inside the ul [if 3rd parameter is true then output : clicked inside the ul , img3 is clicked]
+        */
+        //When you write false : It's a bubble event.
+        //And for true : It's a capturing event.
+     /*   document.getElementById("images").addEventListener('click',function(e){
+            console.log("clicked inside the ul....");
+
+            console.log(e);
+        },false); //output : clicked inside the ul  */
+
+
+        //Below topics related to events you should learn
+        //types , timestamp , deafultPrevented , target , toElement , srcElement , currentTarget , clientX , clientY , screenX ,screenY
+        //altkey ,ctrlkey , shiftkey ,keyCode 
+
+        //Event bublling and Event Capturning are two types of event propegration
+
+        //addEvent , JQuery = on These are not used now in Events
+
+        /*document.getElementById("google").addEventListener('click',function(e){
+            e.preventDefault();
+            console.log("google is clicked...");
+        },false);*/
+
+       document.querySelector("#images").addEventListener('click',function(e){
+                //console.log(e);
+
+                //console.log(e.target);
+
+                console.log(e.target.parentNode);
+
+                let removeIt = e.target.parentNode;
+                //removeIt.remove();
+
+                //removeIt.parentNode.removeChild(removeIt);
+
+                //console.log(e.target.tagName);
+
+                if(e.target.tagName === 'IMG'){
+                   
+                    console.log(e.target.id);
+
+                    let removeIt = e.target.parentNode;
+                    removeIt.remove();
+
+                }
+
+       },false);
+
+    </script>
+</body>
+
+</html>
